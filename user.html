@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Find Guitarist</title>
+</head>
+<body>
+<center><h2>LIST GUITARIST</h2></center>
+<div>
+    {%for user in users%}
+    <ul>
+        <li>ID: {{item.id}}</li>
+        <li>Name: {{item.name}}</li>
+    </ul>
+    {%endfor%}
+</div>
+</body>
+</html>
