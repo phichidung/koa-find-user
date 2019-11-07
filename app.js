@@ -13,9 +13,8 @@ router.get('/search/:name', async (ctx) => {
 
     if (users) {
         ctx.body = nunjucks.render('user.html', { users });
-    } else {
-        ctx.body = { message : 'Not found' }
     }
+        ctx.body = { message : 'Not found' }
 
 });
 
