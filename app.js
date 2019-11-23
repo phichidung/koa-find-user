@@ -1,11 +1,12 @@
-const Koa = require('koa');
-const Router = require('koa-router');
-const nunjucks = require('nunjucks');
-const knex = require('./config');
-const port = 3000;
+const Koa       = require('koa');
+const Router    = require('koa-router');
+const nunjucks  = require('nunjucks');
+const knex      = require('./config');
 
-const app = new Koa();
-const router = new Router();
+const app       = new Koa();
+const router    = new Router();
+
+const port      = 3000;
 
 router.get('/search/:name', async (ctx) => {
 
@@ -14,7 +15,7 @@ router.get('/search/:name', async (ctx) => {
     if (users) {
         ctx.body = nunjucks.render('user.html', { users });
     }
-        ctx.body = { message : 'Not found' }
+    ctx.body = { message : 'Not found' }
 
 });
 
